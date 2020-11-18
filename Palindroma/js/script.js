@@ -7,9 +7,9 @@ function palindroma(parola){
   var i = 0;
   var j = parola.length - 1;
   var uguale = true;;
-  while(i < mezzo && j >= mezzo - 1 && uguale){
-    // console.log("i = ", i);
-    // console.log("j = ", j);
+  while(i < mezzo && j >= mezzo - 1 && uguale && i != j){
+    console.log("i = ", i);
+    console.log("j = ", j);
     if(parola[i] == parola[j]) {
       i++;
       j--;
@@ -32,3 +32,4 @@ var sceltaUtente = prompt("Inserisci una parola");
 // console.log(Math.ceil(sceltaUtente.length / 2));
 var risposta = palindroma(sceltaUtente);
 console.log("La parola", risposta);
+document.getElementById("answer").innerHTML = "La parola " + risposta;
