@@ -1,0 +1,35 @@
+body{
+  text-align: center;
+}
+
+div{
+  height: 40px;
+  line-height: 40px;
+}
+
+div span{
+  width: 40px;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  background: orange;
+  color: white;
+  border-radius: 50%;
+}
+
+div .green{
+  background: green;
+}
+div .red{
+  background: red;
+}
+
+#answer{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+#answer span{
+  width: 100px;
+  border-radius: 5px;
+}
