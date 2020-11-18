@@ -3,7 +3,6 @@
 
 function palindroma(parola){
   parola = parola.replace(/ /g, "");
-
   console.log(parola);
   var mezzo = Math.ceil(parola.length / 2);
   // console.log("mezzo = ", mezzo);
@@ -28,7 +27,6 @@ function palindroma(parola){
   }
   return uguale;
 }
-
 
 
 var sceltaUtente = prompt("Inserisci una parola");
