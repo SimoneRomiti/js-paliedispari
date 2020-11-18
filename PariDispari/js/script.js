@@ -39,26 +39,43 @@ console.log("Scelta PC: ", numeroPc);
 
 // PARI O DISPARI UTENTE
 var sceltaUtente = prompt("Pari o Dispari?");
-// TRASFORMO TUTTE LE LETTERE IN MINUSCOLO E POI LA PRIMA IN MAIUSCOLO
+
+// CONTROLLO SCELTA VUOTA INIZIALE
 while(sceltaUtente == ""){
+
   sceltaUtente = prompt("Devi scrivere pari o dispari!");
+
 }
+// TRASFORMO TUTTE LE LETTERE IN MINUSCOLO E POI LA PRIMA IN MAIUSCOLO
 sceltaUtente = sceltaUtente.toLowerCase();
 var i = 0;
 sceltaUtente = sceltaUtente[i].toUpperCase() + sceltaUtente.substring(i + 1);
 
 // FACCIO TORNARE IL PROMPT SE LA SCELTA E' DIVERSA DA PARI O DISPARI
 while(sceltaUtente != "Pari" && sceltaUtente != "Dispari") {
+
   sceltaUtente = prompt("Devi scrivere pari o dispari!");
+
+  // CONTROLLO SCELTA VUOTA DOPO SCELTA NON VUOTA DIVERSA DA PARI E DISPARI
+  while(sceltaUtente == ""){
+
+    sceltaUtente = prompt("Devi scrivere pari o dispari!");
+
+  }
+
+  // TRASFORMO TUTTE LE LETTERE IN MINUSCOLO E POI LA PRIMA IN MAIUSCOLO DOPO PRIMA SCELTA NON VALIDA
   sceltaUtente = sceltaUtente.toLowerCase();
   var i = 0;
   sceltaUtente = sceltaUtente[i].toUpperCase() + sceltaUtente.substring(i + 1);
+
 }
+
 console.log(sceltaUtente);
 document.getElementById("scelta-utente").innerHTML = "Hai scelto: " + "<span>" + sceltaUtente + "</span>";
 
 // NUMERO UTENTE
 var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+
 // FACCIO TORNARE IL PROMPT SE SCRIVO UNA STRINGA O SE IL NUMERO E' MAGGIORE DI 5 O MINORE DI 4
 while(isNaN(numeroUtente) || numeroUtente > 5 || numeroUtente < 1){
   numeroUtente = parseInt(prompt("Devi inserire un numero tra 1 e 5!"))
