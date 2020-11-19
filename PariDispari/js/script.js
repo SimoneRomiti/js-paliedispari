@@ -5,9 +5,9 @@
 // Dichiariamo chi ha vinto.
 
 // FUNZIONE NUMERO RANDOM PC
-function random(){
+function random(max, min){
 
-  var numeroRandom = Math.floor(Math.random() * (6 - 1) ) + 1;
+  var numeroRandom = Math.floor(Math.random() * (max - min) ) + min;
   return numeroRandom;
 
 }
@@ -34,7 +34,7 @@ function pariDispari(numero, scelta){
 }
 
 // NUMERO PC APPLICANDO FUNZIONE RANDOM
-var numeroPc = random();
+var numeroPc = random(6, 1);
 console.log("Scelta PC: ", numeroPc);
 
 // PARI O DISPARI UTENTE
